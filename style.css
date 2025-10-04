@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', sans-serif;
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));  /* ลดขนาดขั้นต่ำของคอลัมน์ */
+  gap: 15px;
+}
+
+.item { 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item:hover {
+  transform: scale(1.03);
+}
+
+.item img {
+  width: 100%;
+  height: auto;  
+  max-height: 450px; 
+  object-fit: cover;
+  display: block;
+}
+
+.item .info {
+  padding: 8px;
+  text-align: center;
+  width: 450px;
+}
+
+.item .info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.selected {
+  border: 2px solid #4CAF50;
+  box-shadow: 0 0 10px #4CAF50;
+}
+h3 {
+  color: #ffffff;
+}
