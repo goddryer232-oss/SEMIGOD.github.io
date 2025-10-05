@@ -21,6 +21,9 @@ h1 {
 }
 
 .item { 
+  width: 100%;
+  max-width: 400px;
+  max-height: 450px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -31,7 +34,6 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
-
 .item:hover {
   transform: scale(1.03);
 }
@@ -43,13 +45,11 @@ h1 {
   object-fit: cover;
   display: block;
 }
-
 .item .info {
   padding: 8px;
   text-align: center;
-  width: 450px;
+  width: 100%;      /* ให้ยืดตามกล่อง item */
 }
-
 .item .info h3 {
   margin: 0;
   font-size: 16px;
@@ -61,4 +61,61 @@ h1 {
 }
 h3 {
   color: #ffffff;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+/* เมื่อเลื่อนถึงจุดแล้วค่อยๆ แสดง */
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  padding: 5px 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.search-box input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  width: 200px;
+}
+.search-container {
+  position: sticky;
+  top: 0;
+  padding: 1rem;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput {
+  width: 300px;
+  max-width: 90%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+#searchInput:focus {
+  border-color: #888;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
