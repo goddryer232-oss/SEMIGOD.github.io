@@ -1,0 +1,44 @@
+/* Reset เบื้องต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ตั้งค่าพื้นฐานให้ body */
+body {
+    background: url('images/bg.jpg') no-repeat center center fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ส่วนหัว */
+header {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 60px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ลิงก์ Logo */
+.logo {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+/* เอฟเฟกต์เวลาชี้เมาส์ */
+.logo:hover {
+    color: #ffde59;
+    transform: scale(1.1);
+    text-shadow: 0 0 10px #ffde59, 0 0 20px #ffde59;
+}
